@@ -26,7 +26,7 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: MapPin, text: "Cotonou, Bénin", color: "text-gold" },
-    { icon: Phone, text: "+229 XX XX XX XX", color: "text-tech-blue" },
+    { icon: Phone, text: "+229 0159037170", color: "text-tech-blue" },
     { icon: Globe, text: "www.blackbenai.com", color: "text-accent" },
   ];
 
@@ -290,7 +290,7 @@ const Footer = () => {
               >
                 <Heart className="text-gold" size={16} fill="currentColor" />
               </motion.div>
-              <span className="text-primary-foreground/70">au Bénin</span>
+              <span className="text-primary-foreground/70">par l'équipe de BlackBenAI au Bénin</span>
               <motion.span
                 className="text-2xl"
                 animate={{ rotate: [0, 10, -10, 0] }}

@@ -29,7 +29,7 @@ const Projects = () => {
     {
       icon: Shield,
       title: "GreenMetric",
-      slug: "GreenMetric",
+      slug: "greenmetric",
       description: "Solution de gestion des activités agricoles pour favoriser la productivité et la durabilité des agriculteurs africains.",
       color: "from-accent to-tech-blue",
       image: greenMetricImg,
@@ -38,7 +38,7 @@ const Projects = () => {
     {
       icon: FileSignature,
       title: "FineTuner",
-      slug: "FineTuner",
+      slug: "finetuner",
       description: "FineTuner a pour objectif de faire du fine-tuning un véritable jeux d'enfant pour tout utilisateur ayant un profile technologique ou non.",
       color: "from-tech-blue to-accent",
       image: withsignImg,

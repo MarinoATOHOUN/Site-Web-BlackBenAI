@@ -1,29 +1,25 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { Handshake, Globe2, TrendingUp, Award } from "lucide-react";
+import { Handshake } from "lucide-react";
 import partnersBackground from "@/assets/partners-background.jpg";
+import hypeeLogo from "@/assets/logo-hypee.png";
 
 const Partners = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const partners = [
-    { name: "TechCorp Africa", category: "Innovation", logo: Globe2 },
-    { name: "Digital Solutions Ltd", category: "Technology", logo: TrendingUp },
-    { name: "AI Partners Group", category: "Intelligence", logo: Award },
-    { name: "Cloud Systems Inc", category: "Infrastructure", logo: Handshake },
-    { name: "Data Dynamics", category: "Analytics", logo: Globe2 },
-    { name: "Future Tech Alliance", category: "Research", logo: Award },
+    { name: "Hypee", category: "Réseaux Sociaux", logo: hypeeLogo, description: "Création de réseaux sociaux pour le développement de l'Afrique avec intégration des langues locales." },
   ];
 
   return (
     <section id="partners" className="relative py-32 overflow-hidden bg-gradient-to-b from-background via-background/95 to-background">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 opacity-10">
-        <img 
-          src={partnersBackground} 
-          alt="" 
+        <img
+          src={partnersBackground}
+          alt=""
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/90" />
@@ -34,7 +30,7 @@ const Partners = () => {
         <motion.div
           className="absolute top-0 left-0 w-full h-full"
           style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--gold)) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(43 74% 66%) 1px, transparent 0)`,
             backgroundSize: '50px 50px',
           }}
           animate={{
@@ -74,28 +70,27 @@ const Partners = () => {
         >
           <motion.div
             className="inline-flex items-center gap-2 mb-6 px-6 py-3 rounded-full border border-gold/30 bg-gold/5 backdrop-blur-sm"
-            whileHover={{ scale: 1.05, borderColor: "hsl(var(--gold))" }}
+            whileHover={{ scale: 1.05, borderColor: "hsl(43 74% 66%)" }}
           >
             <Handshake className="w-5 h-5 text-gold" />
-            <span className="text-gold font-semibold">Nos Partenaires</span>
+            <span className="text-gold font-semibold">Notre Partenaire</span>
           </motion.div>
           
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gold via-primary to-tech-blue">
             Ensemble Vers l'Excellence
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Des collaborations stratégiques qui façonnent l'avenir de la technologie en Afrique
+            Une collaboration stratégique qui façonne l'avenir de la technologie en Afrique
           </p>
         </motion.div>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-center">
           {partners.map((partner, index) => {
-            const Icon = partner.logo;
             return (
               <motion.div
                 key={index}
-                className="group relative"
+                className="group relative md:col-span-2 lg:col-span-3 lg:w-1/2 mx-auto"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -111,7 +106,7 @@ const Partners = () => {
                   className="relative h-full p-8 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden"
                   whileHover={{ 
                     y: -10,
-                    borderColor: "hsl(var(--gold))",
+                    borderColor: "hsl(43 74% 66%)",
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
@@ -129,7 +124,7 @@ const Partners = () => {
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <Icon className="w-10 h-10 text-gold" strokeWidth={1.5} />
+                    <img src={partner.logo} alt={`${partner.name} logo`} className="w-10 h-10 object-contain" />
                   </motion.div>
 
                   {/* Content */}
@@ -140,6 +135,7 @@ const Partners = () => {
                     <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
                       {partner.name}
                     </h3>
+                     <p className="text-muted-foreground leading-relaxed mb-4">{partner.description}</p>
                     
                     {/* Decorative Line */}
                     <motion.div
@@ -154,7 +150,7 @@ const Partners = () => {
                   <motion.div
                     className="absolute bottom-0 left-0 w-full h-full opacity-0 group-hover:opacity-10 pointer-events-none"
                     style={{
-                      backgroundImage: `repeating-linear-gradient(45deg, hsl(var(--gold)) 0, hsl(var(--gold)) 1px, transparent 0, transparent 50%)`,
+                      backgroundImage: `repeating-linear-gradient(45deg, hsl(43 74% 66%) 0, hsl(43 74% 66%) 1px, transparent 0, transparent 50%)`,
                       backgroundSize: '10px 10px',
                     }}
                   />
@@ -175,7 +171,7 @@ const Partners = () => {
             className="px-8 py-4 rounded-full bg-gradient-to-r from-gold to-primary text-deep-black font-semibold text-lg shadow-2xl shadow-gold/20"
             whileHover={{ 
               scale: 1.05,
-              boxShadow: "0 20px 40px -10px hsl(var(--gold) / 0.4)",
+              boxShadow: "0 20px 40px -10px hsl(43 74% 76% / 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
           >
