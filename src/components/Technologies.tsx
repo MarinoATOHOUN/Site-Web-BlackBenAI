@@ -71,9 +71,9 @@ const Technologies = () => {
     <section id="technologies" className="relative py-32 overflow-hidden bg-gradient-to-b from-background to-muted/20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 opacity-5">
-        <img 
-          src={techBackground} 
-          alt="" 
+        <img
+          src={techBackground}
+          alt=""
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95" />
@@ -85,8 +85,8 @@ const Technologies = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(hsl(var(--gold) / 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, hsl(var(--gold) / 0.1) 1px, transparent 1px)
+              linear-gradient(hsl(43 74% 66% / 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, hsl(43 74% 66% / 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '100px 100px',
           }}
@@ -143,12 +143,12 @@ const Technologies = () => {
         >
           <motion.div
             className="inline-flex items-center gap-2 mb-6 px-6 py-3 rounded-full border border-tech-blue/30 bg-tech-blue/5 backdrop-blur-sm"
-            whileHover={{ scale: 1.05, borderColor: "hsl(var(--tech-blue))" }}
+            whileHover={{ scale: 1.05, borderColor: "hsl(214 95% 55%)" }}
           >
             <Code2 className="w-5 h-5 text-tech-blue" />
             <span className="text-tech-blue font-semibold">Technologies</span>
           </motion.div>
-          
+
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-tech-blue via-gold to-primary">
             Notre Stack Technologique
           </h2>
@@ -167,8 +167,8 @@ const Technologies = () => {
                 className="group relative"
                 initial={{ opacity: 0, scale: 0.8, y: 50 }}
                 animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: index * 0.1,
                   type: "spring",
                   stiffness: 100,
@@ -186,10 +186,10 @@ const Technologies = () => {
                 {/* Main Card */}
                 <motion.div
                   className="relative h-full p-6 rounded-3xl border border-border/50 bg-card/80 backdrop-blur-xl overflow-hidden"
-                  whileHover={{ 
+                  whileHover={{
                     y: -15,
-                    borderColor: "hsl(var(--gold))",
-                    boxShadow: "0 25px 50px -12px hsl(var(--gold) / 0.25)",
+                    borderColor: "hsl(43 74% 66%)",
+                    boxShadow: "0 25px 50px -12px hsl(43 74% 76% / 0.25)",
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
@@ -197,7 +197,7 @@ const Technologies = () => {
                   <motion.div
                     className="absolute inset-0 opacity-5"
                     style={{
-                      backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--gold)) 1px, transparent 0)`,
+                      backgroundImage: `radial-gradient(circle at 1px 1px, hsl(43 74% 66%) 1px, transparent 0)`,
                       backgroundSize: '20px 20px',
                     }}
                     animate={{
@@ -213,14 +213,14 @@ const Technologies = () => {
                   {/* Icon Container */}
                   <motion.div
                     className={`relative mb-4 w-16 h-16 rounded-2xl bg-gradient-to-br ${tech.color} flex items-center justify-center`}
-                    whileHover={{ 
+                    whileHover={{
                       rotate: [0, -10, 10, -10, 0],
                       scale: 1.15,
                     }}
                     transition={{ duration: 0.5 }}
                   >
                     <Icon className="w-8 h-8 text-white" strokeWidth={2} />
-                    
+
                     {/* Icon Glow */}
                     <motion.div
                       className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-50"
@@ -248,14 +248,14 @@ const Technologies = () => {
                           className="px-3 py-1 text-xs rounded-full bg-gold/10 text-gold border border-gold/20"
                           initial={{ opacity: 0, scale: 0 }}
                           animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                          transition={{ 
+                          transition={{
                             delay: index * 0.1 + tagIndex * 0.05,
                             type: "spring",
                             stiffness: 200,
                           }}
-                          whileHover={{ 
+                          whileHover={{
                             scale: 1.1,
-                            backgroundColor: "hsl(var(--gold) / 0.2)",
+                            backgroundColor: "hsl(43 74% 76% / 0.2)",
                           }}
                         >
                           {tag}
@@ -299,9 +299,9 @@ const Technologies = () => {
             className="inline-block px-8 py-4 rounded-full border border-gold/30 bg-gradient-to-r from-gold/5 via-primary/5 to-tech-blue/5 backdrop-blur-sm"
             animate={{
               boxShadow: [
-                "0 0 20px hsl(var(--gold) / 0.1)",
-                "0 0 40px hsl(var(--gold) / 0.2)",
-                "0 0 20px hsl(var(--gold) / 0.1)",
+                "0 0 20px hsl(43 74% 76% / 0.1)",
+                "0 0 40px hsl(43 74% 76% / 0.2)",
+                "0 0 20px hsl(43 74% 76% / 0.1)",
               ],
             }}
             transition={{

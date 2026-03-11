@@ -44,7 +44,7 @@ const Values = () => {
     <section id="values" ref={ref} className="py-24 bg-background dark:bg-gradient-to-br dark:from-background dark:via-deep-black/50 dark:to-background relative overflow-hidden">
       {/* Background decoration - More dynamic */}
       <div className="absolute inset-0 opacity-10 dark:opacity-20">
-        <motion.div 
+        <motion.div
           className="absolute top-0 left-0 w-96 h-96 bg-gold rounded-full blur-3xl"
           animate={{
             x: [0, 50, 0],
@@ -57,7 +57,7 @@ const Values = () => {
             ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"
           animate={{
             x: [0, -50, 0],
@@ -70,7 +70,7 @@ const Values = () => {
             ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 bg-tech-blue rounded-full blur-3xl"
           animate={{
             rotate: [0, 360],
@@ -91,14 +91,14 @@ const Values = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-heading font-bold mb-6"
             animate={isInView ? {
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             } : {}}
             transition={{ duration: 5, repeat: Infinity }}
             style={{
-              backgroundImage: "linear-gradient(90deg, hsl(var(--primary-foreground)), hsl(var(--gold)), hsl(var(--accent)), hsl(var(--primary-foreground)))",
+              backgroundImage: "linear-gradient(90deg, hsl(20 14.3% 4.1%), hsl(43 74% 66%), hsl(358.3 98.3% 67.1%), hsl(20 14.3% 4.1%))",
               backgroundSize: "200% auto",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -107,7 +107,7 @@ const Values = () => {
           >
             Nos Valeurs
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="h-1 bg-gradient-to-r from-gold via-accent to-gold mx-auto mb-6"
             initial={{ width: 0 }}
             animate={isInView ? { width: 80 } : {}}
@@ -124,13 +124,13 @@ const Values = () => {
               key={value.title}
               initial={{ opacity: 0, scale: 0.8, rotateY: -90 }}
               animate={isInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
-              transition={{ 
-                duration: 0.7, 
+              transition={{
+                duration: 0.7,
                 delay: 0.1 + index * 0.15,
                 type: "spring",
                 stiffness: 100,
               }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 rotateZ: [0, -2, 2, 0],
                 transition: { duration: 0.3 }
@@ -148,13 +148,13 @@ const Values = () => {
                   repeat: Infinity,
                 }}
               />
-              
+
               <div className="relative p-8 bg-card/80 dark:bg-gradient-to-br dark:from-primary-foreground/10 dark:to-primary-foreground/5 backdrop-blur-md rounded-3xl border-2 border-border dark:border-primary-foreground/20 hover:border-gold/60 transition-all duration-500 h-full text-center overflow-hidden">
                 {/* Animated background pattern */}
                 <motion.div
                   className="absolute inset-0 opacity-0 group-hover:opacity-10"
                   style={{
-                    backgroundImage: `radial-gradient(circle at center, ${value.color.replace('text-', 'hsl(var(--')}), transparent 70%)`,
+                    backgroundImage: `radial-gradient(circle at center, hsl(43 74% 76%), transparent 70%)`,
                   }}
                   animate={{
                     scale: [1, 1.5, 1],
@@ -166,8 +166,8 @@ const Values = () => {
                     ease: "linear",
                   }}
                 />
-                
-                <motion.div 
+
+                <motion.div
                   className="w-20 h-20 bg-gradient-to-br from-gold via-accent to-tech-blue rounded-2xl flex items-center justify-center mx-auto mb-6 relative"
                   whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                   transition={{ duration: 0.5 }}
@@ -188,15 +188,15 @@ const Values = () => {
                   />
                   <value.icon className="text-white w-10 h-10 relative z-10" strokeWidth={2.5} />
                 </motion.div>
-                
-                <motion.h3 
+
+                <motion.h3
                   className={`text-2xl font-heading font-bold mb-4 ${value.color}`}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.2 }}
                 >
                   {value.title}
                 </motion.h3>
-                
+
                 <p className="text-foreground/80 dark:text-white/90 text-base leading-relaxed relative z-10">
                   {value.description}
                 </p>
