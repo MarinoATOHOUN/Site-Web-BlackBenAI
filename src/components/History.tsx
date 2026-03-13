@@ -11,7 +11,7 @@ const History = () => {
     {
       year: "Aout 2025",
       title: "Naissance de BlackBenAI",
-      description: "Création de l'initiative par Marino Atohoun au Bénin, avec la vision de faire de l'Afrique un producteur d'IA.",
+      description: "Création de l'initiative par Marino ATOHOUN au Bénin, avec la vision de faire de l'Afrique un producteur d'IA.",
       icon: Sparkles,
       gradient: "from-gold to-secondary",
     },

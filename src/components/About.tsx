@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import ceoImage from "@/assets/ceo-marino.png";
+import ceoImage from "@/assets/ceo-marino.jpg";
 import horacioImage from "@/assets/Horacio_NANI.png";
 import { Lightbulb, Target, Users } from "lucide-react";
 
@@ -52,24 +52,24 @@ const About = () => {
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gold shadow-lg bg-white flex items-center justify-center mb-4">
                     <img 
                       src={ceoImage} 
-                      alt="Marino Atohoun - Fondateur de BlackBenAI"
+                      alt="Marino ATOHOUN - Cofondateur & PDG de BlackBenAI"
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
-                  <h4 className="text-xl font-heading font-bold text-foreground mb-1">Marino Atohoun</h4>
-                  <p className="text-gold text-base font-medium">Fondateur & PDG</p>
+                  <h4 className="text-xl font-heading font-bold text-foreground mb-1">Marino ATOHOUN</h4>
+                  <p className="text-gold text-base font-medium">Cofondateur & PDG</p>
                 </div>
                 {/* Profil Horacio */}
                 <div className="flex-1 max-w-xs mx-auto flex flex-col items-center bg-card rounded-2xl shadow-2xl p-6">
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent shadow-lg bg-white flex items-center justify-center mb-4">
                     <img 
                       src={horacioImage} 
-                      alt="Horacio NANI - Economist"
+                      alt="Horacio NANI - Cofondateur & Conseillers économiques"
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <h4 className="text-xl font-heading font-bold text-foreground mb-1">Horacio NANI</h4>
-                  <p className="text-accent text-base font-medium">Economist</p>
+                  <p className="text-accent text-center text-base font-medium">Cofondateur & Conseillers économiques</p>
                 </div>
               </div>
             </section>
@@ -88,7 +88,7 @@ const About = () => {
               </div>
               <div className="flex-1 p-6 bg-card rounded-2xl border border-border shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Fondée en 2025 par Marino Atohoun au Bénin, notre mission est de créer des solutions IA enracinées dans les réalités africaines, par des Africains, pour l'Afrique et le monde.
+                  Notre mission est de créer des solutions IA enracinées dans les réalités africaines, par des Africains, pour l'Afrique et le monde.
                 </p>
               </div>
             </div>
