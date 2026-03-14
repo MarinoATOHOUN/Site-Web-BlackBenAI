@@ -52,11 +52,11 @@ const About = () => {
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gold shadow-lg bg-white flex items-center justify-center mb-4">
                     <img 
                       src={ceoImage} 
-                      alt="Marino ATOHOUN - Cofondateur & PDG de BlackBenAI"
+                      alt="Mahouli Marino ATOHOUN - Cofondateur & PDG de BlackBenAI"
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
-                  <h4 className="text-xl font-heading font-bold text-foreground mb-1">Marino ATOHOUN</h4>
+                  <h4 className="text-xl font-heading font-bold text-foreground mb-1">Mahouli Marino ATOHOUN</h4>
                   <p className="text-gold text-base font-medium">Cofondateur & PDG</p>
                 </div>
                 {/* Profil Horacio */}
@@ -64,12 +64,12 @@ const About = () => {
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent shadow-lg bg-white flex items-center justify-center mb-4">
                     <img 
                       src={horacioImage} 
-                      alt="Horacio NANI - Cofondateur & Conseillers économiques"
+                      alt="Horacio NANI - Cofondateur & Conseiller économique"
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <h4 className="text-xl font-heading font-bold text-foreground mb-1">Horacio NANI</h4>
-                  <p className="text-accent text-center text-base font-medium">Cofondateur & Conseillers économiques</p>
+                  <p className="text-accent text-center text-base font-medium">Cofondateur & Conseiller économique</p>
                 </div>
               </div>
             </section>
