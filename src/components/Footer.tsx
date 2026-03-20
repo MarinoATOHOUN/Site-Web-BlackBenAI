@@ -58,7 +58,7 @@ const Footer = () => {
         }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
-      
+
       {/* Floating icons */}
       <motion.div
         className="absolute top-10 right-20 opacity-10"
@@ -84,14 +84,14 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.div 
+            <motion.div
               className="flex items-center mb-6"
             >
-              <motion.img 
-                src={logo} 
-                alt="BlackBenAI" 
+              <motion.img
+                src={logo}
+                alt="BlackBenAI"
                 className="h-16 drop-shadow-lg"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   filter: "drop-shadow(0 0 20px rgba(212, 175, 55, 0.6))"
                 }}
@@ -101,7 +101,7 @@ const Footer = () => {
             <p className="text-primary-foreground/80 text-sm mb-6 leading-relaxed">
               L'Intelligence Artificielle au service de l'Afrique
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               {contactInfo.map((item, index) => (
@@ -168,7 +168,7 @@ const Footer = () => {
               <Globe className="w-5 h-5 text-tech-blue" />
               Suivez-nous
             </h3>
-            
+
             {/* Social Links */}
             <div className="flex gap-3 mb-8">
               {socialLinks.map((social, index) => (
@@ -176,8 +176,8 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   className={`w-10 h-10 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center ${social.color} transition-all`}
-                  whileHover={{ 
-                    scale: 1.1, 
+                  whileHover={{
+                    scale: 1.1,
                     rotate: 5,
                     backgroundColor: "rgba(255, 255, 255, 0.15)"
                   }}
@@ -229,8 +229,8 @@ const Footer = () => {
             <p className="text-primary-foreground/70 text-sm mb-6 leading-relaxed">
               Restez informé de nos dernières innovations en IA
             </p>
-            <motion.form 
-              onSubmit={handleNewsletterSubmit} 
+            <motion.form
+              onSubmit={handleNewsletterSubmit}
               className="space-y-3"
               whileHover={{ scale: 1.02 }}
             >
@@ -264,7 +264,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           className="border-t border-primary-foreground/10 pt-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -272,35 +272,14 @@ const Footer = () => {
           transition={{ delay: 0.4 }}
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <motion.p 
+            <motion.p
               className="text-sm text-primary-foreground/70"
               whileHover={{ scale: 1.05 }}
             >
               © {currentYear} BlackBenAI. Tous droits réservés.
             </motion.p>
-            
-            <motion.div 
-              className="flex items-center gap-2 text-sm"
-              whileHover={{ scale: 1.05 }}
-            >
-              <span className="text-primary-foreground/70">Fait avec</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <Heart className="text-gold" size={16} fill="currentColor" />
-              </motion.div>
-              <span className="text-primary-foreground/70">par l'équipe de BlackBenAI au Bénin</span>
-              <motion.span
-                className="text-2xl"
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                🇧🇯
-              </motion.span>
-            </motion.div>
 
-            <motion.p 
+            <motion.p
               className="text-xs text-primary-foreground/50 flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
             >
