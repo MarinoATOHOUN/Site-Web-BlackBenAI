@@ -48,7 +48,14 @@ const About = () => {
               <h3 className="text-3xl font-heading font-bold text-center mb-8 text-foreground">Notre équipe</h3>
               <div className="flex flex-col md:flex-row justify-center gap-8">
                 {/* Profil Marino */}
-                <div className="flex-1 max-w-xs mx-auto flex flex-col items-center bg-card rounded-2xl shadow-2xl p-6">
+                <a
+                  href="https://www.linkedin.com/in/marino-atohoun/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Profil LinkedIn de Mahouli Marino ATOHOUN"
+                  title="Voir le profil LinkedIn"
+                  className="flex-1 max-w-xs mx-auto flex flex-col items-center bg-card rounded-2xl shadow-2xl p-6 transition-transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                >
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gold shadow-lg bg-white flex items-center justify-center mb-4">
                     <img 
                       src={ceoImage} 
@@ -58,9 +65,16 @@ const About = () => {
                   </div>
                   <h4 className="text-xl font-heading font-bold text-foreground mb-1">Mahouli Marino ATOHOUN</h4>
                   <p className="text-gold text-base font-medium">Cofondateur & PDG</p>
-                </div>
+                </a>
                 {/* Profil Horacio */}
-                <div className="flex-1 max-w-xs mx-auto flex flex-col items-center bg-card rounded-2xl shadow-2xl p-6">
+                <a
+                  href="https://www.linkedin.com/in/horacio-nani-4b134718b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Profil LinkedIn de Horacio NANI"
+                  title="Voir le profil LinkedIn"
+                  className="flex-1 max-w-xs mx-auto flex flex-col items-center bg-card rounded-2xl shadow-2xl p-6 transition-transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent shadow-lg bg-white flex items-center justify-center mb-4">
                     <img 
                       src={horacioImage} 
@@ -70,7 +84,7 @@ const About = () => {
                   </div>
                   <h4 className="text-xl font-heading font-bold text-foreground mb-1">Horacio NANI</h4>
                   <p className="text-accent text-center text-base font-medium">Cofondateur & Conseiller économique</p>
-                </div>
+                </a>
               </div>
             </section>
             {/* Blocs descriptifs alignés horizontalement */}

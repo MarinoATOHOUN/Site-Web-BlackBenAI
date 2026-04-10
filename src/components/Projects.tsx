@@ -24,7 +24,7 @@ const Projects = () => {
       description: "Plateforme éducative intelligente qui démocratise l'accès au savoir avec des contenus adaptés aux contextes africains.",
       color: "from-gold to-secondary",
       image: edushareImg,
-      link: "https://edushare.blackbenai.com",
+      link: "https://edu-share-six.vercel.app/",
     },
     {
       icon: Shield,
@@ -33,7 +33,7 @@ const Projects = () => {
       description: "Solution de gestion des activités agricoles pour favoriser la productivité et la durabilité des agriculteurs africains.",
       color: "from-accent to-tech-blue",
       image: greenMetricImg,
-      link: "https://agri-tech-eight.vercel.app",
+      link: "https://rinogeek-agrigestionfrontend.hf.space/",
     },
     {
       icon: FileSignature,
@@ -55,12 +55,12 @@ const Projects = () => {
     },
     {
       icon: Database,
-      title: "DataAfrique",
+      title: "AfriDataHub",
       slug: "dataafrique",
       description: "Infrastructure de données ouvertes pour favoriser la recherche et l'innovation en Afrique.",
       color: "from-gold to-accent",
       image: dataafriqueImg,
-      link: "https://dataafrique.blackbenai.com",
+      link: "https://rinogeek-afridatahubfrontend.hf.space/",
     },
     {
       icon: Languages,
@@ -102,7 +102,18 @@ const Projects = () => {
                 transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
                 className="group"
               >
-                <div className="relative bg-card rounded-2xl shadow-lg border border-border hover:border-gold/50 transition-all duration-300 h-full hover:-translate-y-2 overflow-hidden">
+                <div
+                  className="relative bg-card rounded-2xl shadow-lg border border-border hover:border-gold/50 transition-all duration-300 h-full hover:-translate-y-2 overflow-hidden cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => navigate(`/demo/${project.slug}`)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      navigate(`/demo/${project.slug}`);
+                    }
+                  }}
+                >
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img 
@@ -132,7 +143,10 @@ const Projects = () => {
                         size="sm"
                         variant="outline"
                         className="flex-1"
-                        onClick={() => window.open(project.link, '_blank')}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.link, "_blank");
+                        }}
                       >
                         <ExternalLink size={16} className="mr-2" />
                         Accéder
@@ -140,7 +154,10 @@ const Projects = () => {
                       <Button
                         size="sm"
                         className="flex-1 bg-gradient-to-r from-gold to-secondary text-deep-black hover:opacity-90"
-                        onClick={() => navigate(`/demo/${project.slug}`)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate(`/demo/${project.slug}`);
+                        }}
                       >
                         <Play size={16} className="mr-2" />
                         Démo

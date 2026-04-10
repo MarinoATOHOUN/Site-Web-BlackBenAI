@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Play, Pause, RotateCcw, Download, Share2, Star } from "lucide-react";
+import { ArrowLeft, ExternalLink, Play, Pause, RotateCcw, Download, Share2, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import edushareImg from "@/assets/project-edushare.png";
@@ -22,6 +22,7 @@ const ProjectDemo = () => {
       description: "Plateforme éducative intelligente avec des contenus adaptés aux contextes africains. Découvrez comment l'IA rend l'apprentissage accessible à tous.",
       color: "from-gold to-secondary",
       image: edushareImg,
+      link: "https://edu-share-six.vercel.app/",
       features: [
         { title: "Cours Interactifs", desc: "Plus de 10,000 cours dans 15 langues africaines" },
         { title: "IA Personnalisée", desc: "Apprentissage adaptatif basé sur votre progression" },
@@ -44,6 +45,7 @@ const ProjectDemo = () => {
       description: "GreenMetric est une solution de surveillance et d'évaluation de la durabilité environnementale des projets et des initiatives en Afrique. En utilisant l'intelligence artificielle, la plateforme fournit des analyses précises pour promouvoir des pratiques plus écologiques.",
       color: "from-accent to-tech-blue",
       image: greenMetricImg,
+      link: "https://rinogeek-agrigestionfrontend.hf.space/",
       features: [
         { title: "Analyse d'Impact Environnemental", desc: "Évalue l'empreinte carbone et l'impact sur la biodiversité." },
         { title: "Suivi en Temps Réel", desc: "Surveille les indicateurs de durabilité via des données satellitaires et des capteurs IoT." },
@@ -66,6 +68,7 @@ const ProjectDemo = () => {
       description: "FineTuner est une plateforme intuitive qui permet de spécialiser des modèles de langage pour des tâches spécifiques. Grâce à des outils de collaboration et une interface simple, adaptez les grands modèles de langage à vos besoins sans effort.",
       color: "from-tech-blue to-accent",
       image: withsignImg,
+      link: "https://fineturn-plateform-7j6y.vercel.app",
       features: [
         { title: "Interface de 'Drag-and-Drop'", desc: "Importez et préparez vos données sans écrire de code." },
         { title: "Fine-tuning Collaboratif", desc: "Travaillez en équipe sur l'amélioration des modèles." },
@@ -88,6 +91,7 @@ const ProjectDemo = () => {
       description: "Premier modèle de langage multilingue entraîné sur les langues et cultures africaines, préservant notre diversité linguistique.",
       color: "from-secondary to-gold",
       image: afrollmImg,
+      link: "https://afrollm.blackbenai.com",
       features: [
         { title: "15 Langues Africaines", desc: "Swahili, Wolof, Hausa, Yoruba, et plus" },
         { title: "Contexte Culturel", desc: "Comprend les expressions et proverbes africains" },
@@ -105,11 +109,12 @@ const ProjectDemo = () => {
       },
     },
     dataafrique: {
-      title: "DataAfrique",
+      title: "AfriDataHub",
       tagline: "Données ouvertes pour l'Afrique",
       description: "Infrastructure de données ouvertes favorisant la recherche et l'innovation avec des datasets africains de qualité.",
       color: "from-gold to-accent",
       image: dataafriqueImg,
+      link: "https://rinogeek-afridatahubfrontend.hf.space/",
       features: [
         { title: "Datasets Certifiés", desc: "Plus de 5,000 jeux de données vérifiés" },
         { title: "API Gratuite", desc: "Accès libre pour les chercheurs" },
@@ -132,6 +137,7 @@ const ProjectDemo = () => {
       description: "Service de traduction automatique préservant les nuances culturelles des langues africaines avec une précision inégalée.",
       color: "from-accent to-secondary",
       image: translateafricaImg,
+      link: "https://translateafrica.blackbenai.com",
       features: [
         { title: "30 Langues", desc: "Toutes les principales langues africaines" },
         { title: "Traduction Vocale", desc: "Parlez et traduisez en temps réel" },
@@ -235,6 +241,19 @@ const ProjectDemo = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {project.description}
             </p>
+            <div className="mt-10 flex gap-4 justify-center flex-wrap">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-gold to-primary text-deep-black hover:opacity-90"
+                onClick={() => window.open(project.link, "_blank")}
+              >
+                <ExternalLink className="mr-2" size={18} />
+                Accéder au projet
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => navigate("/")}>
+                Retour à l’accueil
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -397,7 +416,11 @@ const ProjectDemo = () => {
             Rejoignez des milliers d'utilisateurs qui font déjà confiance à nos solutions
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-gradient-to-r from-gold to-primary text-deep-black hover:opacity-90">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-gold to-primary text-deep-black hover:opacity-90"
+              onClick={() => window.open(project.link, "_blank")}
+            >
               Commencer Gratuitement
             </Button>
             <Button size="lg" variant="outline">

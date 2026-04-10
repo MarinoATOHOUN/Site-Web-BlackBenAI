@@ -10,7 +10,13 @@ const Partners = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const partners = [
-    { name: "Hypee", category: "Réseaux Sociaux", logo: hypeeLogo, description: "Création de réseaux sociaux pour le développement de l'Afrique avec intégration des langues locales." },
+    {
+      name: "Hypee",
+      category: "Réseaux Sociaux",
+      logo: hypeeLogo,
+      description: "Création de réseaux sociaux pour le développement de l'Afrique avec intégration des langues locales.",
+      href: "https://hypee-web-site.vercel.app/",
+    },
   ];
 
   return (
@@ -88,9 +94,14 @@ const Partners = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-center">
           {partners.map((partner, index) => {
             return (
-              <motion.div
+              <motion.a
                 key={index}
                 className="group relative md:col-span-2 lg:col-span-3 lg:w-1/2 mx-auto"
+                href={partner.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visiter ${partner.name}`}
+                title={`Visiter ${partner.name}`}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -155,7 +166,7 @@ const Partners = () => {
                     }}
                   />
                 </motion.div>
-              </motion.div>
+              </motion.a>
             );
           })}
         </div>

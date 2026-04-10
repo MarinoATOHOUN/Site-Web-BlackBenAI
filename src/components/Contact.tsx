@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Linkedin, label: "LinkedIn", href: "#", color: "hover:text-accent" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/blackbenai", color: "hover:text-accent" },
     { icon: Github, label: "GitHub", href: "#", color: "hover:text-foreground" },
     { icon: Twitter, label: "Twitter", href: "#", color: "hover:text-tech-blue" },
     { icon: Mail, label: "Email", href: "mailto:contact@blackbenai.com", color: "hover:text-gold" },

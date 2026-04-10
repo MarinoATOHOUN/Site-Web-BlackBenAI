@@ -20,7 +20,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Github, href: "#", label: "Github", color: "hover:text-purple-400" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/blackbenai", label: "LinkedIn", color: "hover:text-blue-400" },
     { icon: Twitter, href: "#", label: "Twitter", color: "hover:text-sky-400" },
   ];
 
@@ -171,25 +171,32 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex gap-3 mb-8">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  className={`w-10 h-10 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center ${social.color} transition-all`}
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    backgroundColor: "rgba(255, 255, 255, 0.15)"
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
+              {socialLinks.map((social, index) => {
+                const isExternal = social.href.startsWith("http");
+                return (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                    aria-label={social.label}
+                    title={social.label}
+                    className={`w-10 h-10 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center ${social.color} transition-all`}
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: 5,
+                      backgroundColor: "rgba(255, 255, 255, 0.15)"
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                );
+              })}
             </div>
 
             {/* Legal Links */}

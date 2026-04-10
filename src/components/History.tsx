@@ -18,7 +18,7 @@ const History = () => {
     {
       year: "Septembre 2025 - Octobre 2025",
       title: "Lancement des premiers projets",
-      description: "Développement et déploiement de 6 projets d'IA innovants : Edushare, SecurLog, WithSign, AfroLLM, DataAfrique, et TranslateAfrica.",
+      description: "Développement et déploiement de 6 projets d'IA innovants : Edushare, SecurLog, WithSign, AfroLLM, AfriDataHub, et TranslateAfrica.",
       icon: Rocket,
       gradient: "from-accent to-tech-blue",
     },
